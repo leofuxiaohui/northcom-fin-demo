@@ -20,6 +20,22 @@
     .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; color:var(--ink); text-decoration:none; }
     .card:hover { border-color:var(--brand); color:var(--brand); }
     .test { display:none; margin:0 0 16px; padding:10px 14px; border-radius:10px; background:#eef2ff; color:#3730a3; font-size:14px; }
+    /* topics */
+    .topics-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 16px; }
+    .topics-head h2 { margin:0; font-size:28px; letter-spacing:-.01em; }
+    .topics-head span { color:var(--muted); }
+    .search { width:100%; padding:14px 16px; margin:0 0 20px; font:inherit; border:1px solid #cbd5e1; border-radius:10px; background:#fff; }
+    .search:focus { outline:2px solid var(--brand); outline-offset:1px; border-color:var(--brand); }
+    .topics { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:18px; }
+    .topic { display:flex; flex-direction:column; padding:24px; background:#fff; border:1px solid var(--line); border-radius:14px;
+             box-shadow:0 1px 2px rgba(15,23,42,.04), 0 4px 14px rgba(15,23,42,.05); color:var(--ink); text-decoration:none;
+             transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+    .topic:hover { transform:translateY(-2px); border-color:var(--brand); box-shadow:0 8px 24px rgba(14,116,144,.14); }
+    .topic h3 { margin:0 0 10px; font-size:20px; line-height:1.25; color:var(--brand); }
+    .topic p { margin:0 0 18px; color:var(--muted); font-size:15px; flex:1; }
+    .topic .more { color:var(--brand); font-weight:600; font-size:15px; }
+    .topic .more::after { content:" \2192"; }
+    .none { display:none; color:var(--muted); margin:8px 0 0; }
   </style>
 </head>
 <body>
@@ -39,36 +55,37 @@
         <div class="card"><b>Brightline Plumbing</b>, business<br>dana.okafor@example.com · ZIP 78704<br><small>"We need 3 more lines for our vans"</small></div>
       </div>
     </section>
-    <section class="panel">
-      <h2>Help articles</h2>
-      <p class="sub">25 articles</p>
-      <div class="grid">
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/accessing-your-account-online-and-via-app" target="_blank" rel="noopener">Accessing Your NorthCom Account Online and via App</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/activating-a-new-sim-card" target="_blank" rel="noopener">Activating a New SIM or eSIM on Your NorthCom Line</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/adding-a-line-to-your-account" target="_blank" rel="noopener">Adding a Line to Your NorthCom Account</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/blocking-spam-calls-and-text-messages" target="_blank" rel="noopener">Blocking Spam Calls and Text Messages on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/choosing-the-right-plan-for-your-family" target="_blank" rel="noopener">Choosing the Right NorthCom Plan for Your Family</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-emergency-sos" target="_blank" rel="noopener">Enabling Emergency SOS on Your NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-esim-and-dual-line" target="_blank" rel="noopener">Enabling eSIM and Dual-line on Your NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-wifi-calling" target="_blank" rel="noopener">Enabling Wi-Fi Calling on Your NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/how-5g-changes-your-service" target="_blank" rel="noopener">How 5G Changes Your Service on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/managing-data-usage-and-overages" target="_blank" rel="noopener">Managing Data Usage and Overages on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/recovering-a-lost-or-stolen-device" target="_blank" rel="noopener">Recovering a Lost or Stolen NorthCom Device</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/resolving-call-quality-issues" target="_blank" rel="noopener">Resolving Call Quality Issues on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-a-mobile-hotspot" target="_blank" rel="noopener">Setting Up a Mobile Hotspot on Your NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-international-roaming" target="_blank" rel="noopener">Setting Up International Roaming on Your NorthCom Plan</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-parental-controls" target="_blank" rel="noopener">Setting Up Parental Controls on a NorthCom Line</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-voicemail-and-visual-voicemail" target="_blank" rel="noopener">Setting Up Voicemail and Visual Voicemail on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/switching-from-another-carrier" target="_blank" rel="noopener">Switching to NorthCom from Another Carrier</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/trading-in-your-old-device" target="_blank" rel="noopener">Trading in Your Old Device with NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/transferring-content-to-a-new-phone" target="_blank" rel="noopener">Transferring Content to a New NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-mms-and-group-text-issues" target="_blank" rel="noopener">Troubleshooting MMS and Group Text Issues on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-no-signal-issues" target="_blank" rel="noopener">Troubleshooting &quot;No Service&quot; or Weak Signal on Your NorthCom Phone</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-device-financing-and-upgrades" target="_blank" rel="noopener">Understanding Device Financing and Upgrades on NorthCom</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-northcom-protect" target="_blank" rel="noopener">Understanding NorthCom Protect</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-your-monthly-bill" target="_blank" rel="noopener">Understanding Your Monthly NorthCom Bill</a>
-      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/using-northcom-home-internet" target="_blank" rel="noopener">Using NorthCom Home Internet</a>
+    <section class="panel" id="topics">
+      <div class="topics-head"><h2>Featured topics</h2><span>25 total articles</span></div>
+      <input id="topic-search" class="search" type="search" placeholder="Search NorthCom help articles" aria-label="Search help articles">
+      <div class="topics">
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/accessing-your-account-online-and-via-app" target="_blank" rel="noopener"><h3>Accessing Your NorthCom Account Online and via App</h3><p>Set up My NorthCom on the web or app, turn on two-factor sign-in, add authorized users and recover a locked account.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/activating-a-new-sim-card" target="_blank" rel="noopener"><h3>Activating a New SIM or eSIM on Your NorthCom Line</h3><p>Activate a physical SIM or an eSIM on your line, what activation changes, and what to do if it doesn&#x27;t work.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/adding-a-line-to-your-account" target="_blank" rel="noopener"><h3>Adding a Line to Your NorthCom Account</h3><p>Adding a line works the same whether the new line is for a family member, a smartwatch, a tablet, or a second phone for yourself.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/blocking-spam-calls-and-text-messages" target="_blank" rel="noopener"><h3>Blocking Spam Calls and Text Messages on NorthCom</h3><p>Every NorthCom postpaid line includes Call Defense Standard at no charge.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/choosing-the-right-plan-for-your-family" target="_blank" rel="noopener"><h3>Choosing the Right NorthCom Plan for Your Family</h3><p>All three plans include 5G access, Wi-Fi Calling, Visual Voicemail, and Call Defense Standard.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-emergency-sos" target="_blank" rel="noopener"><h3>Enabling Emergency SOS on Your NorthCom Phone</h3><p>Set up emergency contacts and learn how to trigger Emergency SOS on iPhone and Android.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-esim-and-dual-line" target="_blank" rel="noopener"><h3>Enabling eSIM and Dual-line on Your NorthCom Phone</h3><p>Most modern phones support running two phone numbers on one device.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-wifi-calling" target="_blank" rel="noopener"><h3>Enabling Wi-Fi Calling on Your NorthCom Phone</h3><p>Wi-Fi Calling routes your voice calls and texts over a Wi-Fi network instead of the cellular network.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/how-5g-changes-your-service" target="_blank" rel="noopener"><h3>How 5G Changes Your Service on NorthCom</h3><p>What the 5G icons mean, what actually gets faster, and which plans and devices qualify.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/managing-data-usage-and-overages" target="_blank" rel="noopener"><h3>Managing Data Usage and Overages on NorthCom</h3><p>All NorthCom postpaid plans are technically &quot;unlimited&quot; — you&#x27;ll never get a bill for going over a data cap.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/recovering-a-lost-or-stolen-device" target="_blank" rel="noopener"><h3>Recovering a Lost or Stolen NorthCom Device</h3><p>What to do in the first 15 minutes: locate the phone, suspend the line, report it stolen and replace it.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/resolving-call-quality-issues" target="_blank" rel="noopener"><h3>Resolving Call Quality Issues on NorthCom</h3><p>Fix dropped calls, choppy or robotic audio and one-way audio, on cellular and on Wi-Fi Calling.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-a-mobile-hotspot" target="_blank" rel="noopener"><h3>Setting Up a Mobile Hotspot on Your NorthCom Phone</h3><p>Your NorthCom phone can act as a small Wi-Fi router, sharing its cellular connection with up to 10 other devices.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-international-roaming" target="_blank" rel="noopener"><h3>Setting Up International Roaming on Your NorthCom Plan</h3><p>Most NorthCom postpaid plans include domestic talk, text, and data only.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-parental-controls" target="_blank" rel="noopener"><h3>Setting Up Parental Controls on a NorthCom Line</h3><p>Combine NorthCom Family Controls with Screen Time or Family Link for content filters, time limits and trusted contacts.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-voicemail-and-visual-voicemail" target="_blank" rel="noopener"><h3>Setting Up Voicemail and Visual Voicemail on NorthCom</h3><p>Voicemail is included on every NorthCom postpaid line.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/switching-from-another-carrier" target="_blank" rel="noopener"><h3>Switching to NorthCom from Another Carrier</h3><p>Moving your phone number from another carrier to NorthCom is called a port-in.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/trading-in-your-old-device" target="_blank" rel="noopener"><h3>Trading in Your Old Device with NorthCom</h3><p>You can trade in an old phone, tablet, or smartwatch for credit toward a new device or as a statement credit on your account.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/transferring-content-to-a-new-phone" target="_blank" rel="noopener"><h3>Transferring Content to a New NorthCom Phone</h3><p>Set aside 30–60 minutes and keep both phones plugged in or above 50% battery.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-no-signal-issues" target="_blank" rel="noopener"><h3>Troubleshooting &quot;No Service&quot; or Weak Signal on Your NorthCom Phone</h3><p>Quick fixes for &quot;No Service&quot; or weak signal, then coverage, line status, network reset and SIM checks.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-mms-and-group-text-issues" target="_blank" rel="noopener"><h3>Troubleshooting MMS and Group Text Issues on NorthCom</h3><p>MMS (Multimedia Messaging Service) handles picture, video, and group messages.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-device-financing-and-upgrades" target="_blank" rel="noopener"><h3>Understanding Device Financing and Upgrades on NorthCom</h3><p>How interest-free device installments, trade-in promotions, upgrade eligibility and early payoff work.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-northcom-protect" target="_blank" rel="noopener"><h3>Understanding NorthCom Protect</h3><p>NorthCom Protect is the device protection plan offered when you finance or BYOD a phone.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-your-monthly-bill" target="_blank" rel="noopener"><h3>Understanding Your Monthly NorthCom Bill</h3><p>NorthCom bills on a 30-day cycle starting the day your service activated.</p><span class="more">Read article</span></a>
+        <a class="topic" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/using-northcom-home-internet" target="_blank" rel="noopener"><h3>Using NorthCom Home Internet</h3><p>NorthCom Home Internet is a 5G fixed-wireless service that replaces traditional cable or DSL.</p><span class="more">Read article</span></a>
       </div>
+      <p id="topic-none" class="none">No articles match. Try another word, or ask Fin in the chat.</p>
     </section>
   </main>
   <script>
@@ -83,6 +100,16 @@
       var s = document.createElement("script"); s.async = true; s.src = "https://widget.intercom.io/widget/" + boot.app_id;
       document.head.appendChild(s);
       w.Intercom("boot", boot);
+    })();
+  </script>
+  <script>
+    (function () {
+      var box = document.getElementById("topic-search"), cards = document.querySelectorAll(".topic"), none = document.getElementById("topic-none");
+      box.addEventListener("input", function () {
+        var q = box.value.trim().toLowerCase(), shown = 0;
+        cards.forEach(function (c) { var hit = !q || c.textContent.toLowerCase().indexOf(q) !== -1; c.style.display = hit ? "" : "none"; if (hit) shown++; });
+        none.style.display = shown ? "none" : "block";
+      });
     })();
   </script>
 </body>
