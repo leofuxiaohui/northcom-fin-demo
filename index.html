@@ -75,7 +75,7 @@
     (function () {
       var q = new URLSearchParams(location.search);
       var env = q.get("messenger_environment");
-      var boot = { api_base: "https://api-iam.intercom.io", app_id: "na5o0rtj" };
+      var boot = { api_base: "https://api-iam.intercom.io", app_id: "na5o0rtj", hide_default_launcher: false }; // the workspace hides the launcher by default; this page shows it
       if (env) { boot.messenger_environment = env; document.getElementById("testbar").style.display = "block"; }
       var w = window, ic = w.Intercom;
       if (typeof ic === "function") { ic("reattach_activator"); ic("update", boot); return; }
