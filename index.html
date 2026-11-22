@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NorthCom Wireless Support</title>
+  <style>
+    :root { --ink:#0b1f33; --muted:#475569; --line:#e2e8f0; --brand:#0e7490; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#f8fafc; }
+    header { background:var(--ink); color:#fff; padding:56px 24px 64px; text-align:center; }
+    header .logo { font-weight:700; letter-spacing:.02em; opacity:.8; }
+    header h1 { margin:12px 0 8px; font-size:40px; }
+    header p { margin:0 auto; max-width:620px; color:#cbd5e1; }
+    main { max-width:980px; margin:-32px auto 64px; padding:0 24px; }
+    .panel { background:#fff; border:1px solid var(--line); border-radius:14px; padding:28px; }
+    .panel h2 { margin:0 0 4px; font-size:20px; }
+    .panel .sub { margin:0 0 20px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:12px; }
+    .card { display:block; padding:14px 16px; border:1px solid var(--line); border-radius:10px; color:var(--ink); text-decoration:none; }
+    .card:hover { border-color:var(--brand); color:var(--brand); }
+    .test { display:none; margin:0 0 16px; padding:10px 14px; border-radius:10px; background:#eef2ff; color:#3730a3; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">NorthCom</div>
+    <h1>How can we help?</h1>
+    <p>Help with plans, bills, lines, devices, and coverage. Ask Fin in the chat (bottom right) or browse the articles below.</p>
+  </header>
+  <main>
+    <div class="test" id="testbar">Fin test mode — this Messenger is visible only in your signed-in Intercom browser.</div>
+    <section class="panel" style="margin-bottom:16px">
+      <h2>Try it in the chat</h2>
+      <p class="sub">Demo accounts (fictional). Fin asks for an email or phone number plus the billing ZIP code.</p>
+      <div class="grid">
+        <div class="card"><b>Jordan Rivera</b>, 4-line family plan<br>jordan.rivera@example.com · ZIP 98103 · PIN 4821<br><small>"Why is my bill $10 higher?" · "Alex's data keeps slowing down" · "Add a line for my son" · "Mia's phone was stolen"</small></div>
+        <div class="card"><b>Wei Chen</b>, single line<br>wei.chen@example.com · ZIP 60614 · PIN 7390<br><small>"When is my bill due?" · "Move me to Unlimited Ultra" · "Add a line for my partner"</small></div>
+        <div class="card"><b>Brightline Plumbing</b>, business<br>dana.okafor@example.com · ZIP 78704<br><small>"We need 3 more lines for our vans"</small></div>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Help articles</h2>
+      <p class="sub">25 articles</p>
+      <div class="grid">
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/accessing-your-account-online-and-via-app" target="_blank" rel="noopener">Accessing Your NorthCom Account Online and via App</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/activating-a-new-sim-card" target="_blank" rel="noopener">Activating a New SIM or eSIM on Your NorthCom Line</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/adding-a-line-to-your-account" target="_blank" rel="noopener">Adding a Line to Your NorthCom Account</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/blocking-spam-calls-and-text-messages" target="_blank" rel="noopener">Blocking Spam Calls and Text Messages on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/choosing-the-right-plan-for-your-family" target="_blank" rel="noopener">Choosing the Right NorthCom Plan for Your Family</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-emergency-sos" target="_blank" rel="noopener">Enabling Emergency SOS on Your NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-esim-and-dual-line" target="_blank" rel="noopener">Enabling eSIM and Dual-line on Your NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/enabling-wifi-calling" target="_blank" rel="noopener">Enabling Wi-Fi Calling on Your NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/how-5g-changes-your-service" target="_blank" rel="noopener">How 5G Changes Your Service on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/managing-data-usage-and-overages" target="_blank" rel="noopener">Managing Data Usage and Overages on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/recovering-a-lost-or-stolen-device" target="_blank" rel="noopener">Recovering a Lost or Stolen NorthCom Device</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/resolving-call-quality-issues" target="_blank" rel="noopener">Resolving Call Quality Issues on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-a-mobile-hotspot" target="_blank" rel="noopener">Setting Up a Mobile Hotspot on Your NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-international-roaming" target="_blank" rel="noopener">Setting Up International Roaming on Your NorthCom Plan</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-parental-controls" target="_blank" rel="noopener">Setting Up Parental Controls on a NorthCom Line</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/setting-up-voicemail-and-visual-voicemail" target="_blank" rel="noopener">Setting Up Voicemail and Visual Voicemail on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/switching-from-another-carrier" target="_blank" rel="noopener">Switching to NorthCom from Another Carrier</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/trading-in-your-old-device" target="_blank" rel="noopener">Trading in Your Old Device with NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/transferring-content-to-a-new-phone" target="_blank" rel="noopener">Transferring Content to a New NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-mms-and-group-text-issues" target="_blank" rel="noopener">Troubleshooting MMS and Group Text Issues on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/troubleshooting-no-signal-issues" target="_blank" rel="noopener">Troubleshooting &quot;No Service&quot; or Weak Signal on Your NorthCom Phone</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-device-financing-and-upgrades" target="_blank" rel="noopener">Understanding Device Financing and Upgrades on NorthCom</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-northcom-protect" target="_blank" rel="noopener">Understanding NorthCom Protect</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/understanding-your-monthly-bill" target="_blank" rel="noopener">Understanding Your Monthly NorthCom Bill</a>
+      <a class="card" href="https://enterprise-knowledge-demo-c51ab9e5cccf.herokuapp.com/comms/using-northcom-home-internet" target="_blank" rel="noopener">Using NorthCom Home Internet</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var env = q.get("messenger_environment");
+      var boot = { api_base: "https://api-iam.intercom.io", app_id: "na5o0rtj" };
+      if (env) { boot.messenger_environment = env; document.getElementById("testbar").style.display = "block"; }
+      var w = window, ic = w.Intercom;
+      if (typeof ic === "function") { ic("reattach_activator"); ic("update", boot); return; }
+      var i = function () { i.c(arguments); }; i.q = []; i.c = function (a) { i.q.push(a); }; w.Intercom = i;
+      var s = document.createElement("script"); s.async = true; s.src = "https://widget.intercom.io/widget/" + boot.app_id;
+      document.head.appendChild(s);
+      w.Intercom("boot", boot);
+    })();
+  </script>
+</body>
+</html>
